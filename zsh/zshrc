@@ -1,0 +1,10 @@
+# ~/.zshrc -- sourced for interactive shells
+export ZDOTDIR="${ZDOTDIR:-$HOME}"
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=50000
+setopt HIST_IGNORE_DUPS HIST_IGNORE_SPACE SHARE_HISTORY INC_APPEND_HISTORY
+setopt AUTO_CD INTERACTIVE_COMMENTS
+
+autoload -Uz compinit && compinit -q
