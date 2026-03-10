@@ -8,3 +8,6 @@ setopt HIST_IGNORE_DUPS HIST_IGNORE_SPACE SHARE_HISTORY INC_APPEND_HISTORY
 setopt AUTO_CD INTERACTIVE_COMMENTS
 
 autoload -Uz compinit && compinit -q
+for f in aliases; do
+  [[ -r "$HOME/.config/zsh/$f.zsh" ]] && source "$HOME/.config/zsh/$f.zsh"
+done
