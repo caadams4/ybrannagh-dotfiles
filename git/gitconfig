@@ -1,0 +1,31 @@
+[user]
+    # set these per machine in ~/.gitconfig.local
+    name = CHANGE_ME
+    email = user@example.invalid
+
+[include]
+    path = ~/.gitconfig.local
+
+[core]
+    editor = nvim
+    excludesfile = ~/.config/git/ignore
+    autocrlf = input
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true
+
+[push]
+    autoSetupRemote = true
+
+[fetch]
+    prune = true
+
+[diff]
+    algorithm = histogram
+    colorMoved = default
+
+[rebase]
+    autoStash = true
