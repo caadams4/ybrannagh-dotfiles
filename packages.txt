@@ -1,0 +1,11 @@
+# One package per line, '#' for comments. Names are Debian/Ubuntu and Homebrew
+# compatible unless noted. Read by bootstrap.sh.
+git
+tmux
+zsh
+neovim
+ripgrep
+fd-find
+jq
+curl
+postgresql-client
