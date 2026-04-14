@@ -18,6 +18,7 @@ link() {
 }
 
 link "$REPO/zsh/zshrc"       "$HOME/.zshrc"
+link "$REPO/zsh/exports.zsh" "$CONF/zsh/exports.zsh"
 link "$REPO/zsh/prompt.zsh"  "$CONF/zsh/prompt.zsh"
 link "$REPO/zsh/aliases.zsh" "$CONF/zsh/aliases.zsh"
 link "$REPO/git/gitconfig"   "$HOME/.gitconfig"
