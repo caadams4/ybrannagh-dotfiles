@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# csvpeek FILE [N] -- show header and first N rows (default 10) as an aligned table
+set -euo pipefail
+f="${1:?usage: csvpeek FILE [N]}"
+n="${2:-10}"
+head -n "$((n + 1))" "$f" | column -s, -t
+echo "-- $(($(wc -l < "$f") - 1)) data rows"

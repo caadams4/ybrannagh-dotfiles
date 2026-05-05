@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# pgtunnel [LOCAL_PORT] -- open an ssh tunnel to the staging warehouse via the bastion.
+# Reads PV_BASTION_HOST and PV_WAREHOUSE_HOST from the environment (see env/env.example).
+set -euo pipefail
+: "${PV_BASTION_HOST:?set PV_BASTION_HOST}"
+: "${PV_WAREHOUSE_HOST:?set PV_WAREHOUSE_HOST}"
+port="${1:-5433}"
+echo "forwarding localhost:${port} -> ${PV_WAREHOUSE_HOST}:5432 via ${PV_BASTION_HOST}"
+exec ssh -N -L "${port}:${PV_WAREHOUSE_HOST}:5432" "${PV_BASTION_HOST}"
