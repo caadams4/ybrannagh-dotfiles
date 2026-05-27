@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# embedcheck URL -- quick check that a signed dashboard embed URL answers.
+# Prints the HTTP status and whether the response allows framing.
+set -euo pipefail
+url="${1:?usage: embedcheck URL}"
+curl -sS -o /dev/null -D - --max-time 10 "$url" \
+  | grep -iE '^(HTTP/|content-security-policy|x-frame-options)' || true
