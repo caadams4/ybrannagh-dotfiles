@@ -16,3 +16,14 @@ o.signcolumn = "yes"
 vim.keymap.set("n", "<leader>w", "<cmd>write<cr>")
 vim.keymap.set("n", "<leader>q", "<cmd>quit<cr>")
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>")
+
+-- sql / data files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "sql", "yaml", "json" },
+  callback = function() vim.opt_local.shiftwidth = 2; vim.opt_local.tabstop = 2 end,
+})
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  command = [[%s/\s\+$//e]],
+})
+-- TODO: switch to lazy.nvim and add LSP once I decide which ones
