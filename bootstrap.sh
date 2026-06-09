@@ -25,6 +25,7 @@ link "$REPO/zsh/aliases.zsh" "$CONF/zsh/aliases.zsh"
 link "$REPO/git/gitconfig"   "$HOME/.gitconfig"
 link "$REPO/git/ignore"      "$CONF/git/ignore"
 link "$REPO/psql/psqlrc"      "$HOME/.psqlrc"
+link "$REPO/sqlfluff/sqlfluff" "$CONF/sqlfluff"
 link "$REPO/tmux/tmux.conf"  "$HOME/.tmux.conf"
 link "$REPO/nvim/init.lua"   "$CONF/nvim/init.lua"
 
