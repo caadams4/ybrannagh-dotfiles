@@ -9,3 +9,6 @@ fd-find
 jq
 curl
 postgresql-client
+shellcheck
+sqlite3
+pgcli
