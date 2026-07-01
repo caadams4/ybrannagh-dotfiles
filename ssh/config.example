@@ -1,0 +1,11 @@
+# Template. Copy to ~/.ssh/config and adjust. Key paths only, no key material in this repo.
+Host pv-bastion
+    HostName 10.72.0.5
+    User CHANGE_ME
+    IdentityFile ~/.ssh/id_ed25519
+    ServerAliveInterval 30
+
+Host pv-warehouse-stg
+    HostName 10.72.0.21
+    User CHANGE_ME
+    ProxyJump pv-bastion
