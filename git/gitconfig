@@ -29,3 +29,13 @@
 
 [rebase]
     autoStash = true
+
+[alias]
+    st = status -sb
+    last = log -1 --stat
+    amend = commit --amend --no-edit
+    unstage = reset HEAD --
+    wip = commit -am "wip"
+
+[commit]
+    template = ~/.config/git/message
