@@ -23,6 +23,11 @@ cd ~/dotfiles
 | `git/ignore` | Global gitignore |
 | `tmux/tmux.conf` | tmux config, prefix is `C-a` |
 | `nvim/init.lua` | Minimal neovim config |
+| `psql/psqlrc` | psql display, timing and history settings |
+| `sqlfluff/sqlfluff` | SQL lint config, postgres dialect |
+| `ssh/config.example` | ssh config template (bastion + staging warehouse) |
+| `env/env.example` | Names of the env vars my scripts read, all empty |
+| `bin/` | Small scripts: `csvpeek`, `pgtunnel`, `embedcheck` |
 
 ## Git identity
 
@@ -34,4 +39,4 @@ cd ~/dotfiles
     email = you@example.invalid
 ```
 
-Owner: Yuki Brannagh. Last reviewed: 2026-04-02
+Owner: Yuki Brannagh. Last reviewed: 2026-07-08
