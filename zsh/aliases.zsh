@@ -14,3 +14,9 @@ alias gco='git checkout'
 # misc
 alias please='sudo $(fc -ln -1)'
 alias myip='ip -4 -br addr'
+
+# data work
+alias pg='pgcli'
+alias csv='csvpeek'
+alias jqc='jq -C . | less -R'
+alias dc='docker compose'
