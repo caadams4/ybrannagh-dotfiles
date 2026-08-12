@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# nightly-status -- did last night's ingest push finish? Reads the log dir from PV_LOG_DIR.
+# Prints the last 5 lines of the newest ingest log.
+set -euo pipefail
+: "${PV_LOG_DIR:?set PV_LOG_DIR}"
+newest="$(ls -t "$PV_LOG_DIR"/ingest-*.log 2>/dev/null | head -1)"
+[[ -n "$newest" ]] || { echo "no ingest logs in $PV_LOG_DIR"; exit 1; }
+echo "$newest"
+tail -n 5 "$newest"
