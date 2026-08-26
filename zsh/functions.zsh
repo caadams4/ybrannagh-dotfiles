@@ -11,5 +11,8 @@ loadenv() {
 # pgq 'SELECT ...' -- one-off query, csv output
 pgq() { psql --csv -c "$1"; }
 
-# gb -- fuzzy-ish branch switcher without fzf
+# gb -- list recent branches
 gb() { git branch --sort=-committerdate | head -15; }
+
+# up N -- cd up N levels
+up() { local n=${1:-1} p=""; while (( n-- > 0 )); do p+="../"; done; cd "${p:-.}"; }
