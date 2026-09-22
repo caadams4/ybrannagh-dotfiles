@@ -12,3 +12,5 @@ postgresql-client
 shellcheck
 sqlite3
 pgcli
+lsof
+column

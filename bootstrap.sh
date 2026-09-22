@@ -41,3 +41,4 @@ if [[ "${1:-}" != "--no-packages" ]]; then
 fi
 
 echo "done. put your identity in ~/.gitconfig.local"
+echo "optional: cp env/env.example ~/.config/peltaview.env and fill it in"
