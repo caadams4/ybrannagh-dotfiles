@@ -3,5 +3,5 @@
 set -euo pipefail
 f="${1:?usage: csvpeek FILE [N]}"
 n="${2:-10}"
-head -n "$((n + 1))" "$f" | column -s, -t
+head -n "$((n + 1))" "$f" | column -s, -t | cut -c1-"${COLUMNS:-160}"
 echo "-- $(($(wc -l < "$f") - 1)) data rows"
