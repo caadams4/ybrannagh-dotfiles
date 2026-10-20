@@ -26,4 +26,10 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",
   command = [[%s/\s\+$//e]],
 })
--- TODO: switch to lazy.nvim and add LSP once I decide which ones
+-- TODO: switch to lazy.nvim and add LSP once I decide which ones (still undecided)
+
+-- quick toggle for spell check in markdown / commit messages
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "gitcommit" },
+  callback = function() vim.opt_local.spell = true; vim.opt_local.wrap = true end,
+})
