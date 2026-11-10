@@ -29,6 +29,11 @@ cd ~/dotfiles
 | `env/env.example` | Names of the env vars my scripts read, all empty |
 | `bin/` | Small scripts: `csvpeek`, `pgtunnel`, `embedcheck` |
 
+## Notes
+
+- The prompt used to need `vcs_info` from a plugin; it is built in now, nothing to install.
+- Tested on Debian 12 and Ubuntu 22.04. macOS/brew path in `bootstrap.sh` is untested since the laptop swap.
+
 ## Git identity
 
 `git/gitconfig` includes `~/.gitconfig.local`. Put your real `[user]` block there:
@@ -39,4 +44,4 @@ cd ~/dotfiles
     email = you@example.invalid
 ```
 
-Owner: Yuki Brannagh. Last reviewed: 2026-07-08
+Owner: Yuki Brannagh. Last reviewed: 2026-11-10
