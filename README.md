@@ -27,7 +27,7 @@ cd ~/dotfiles
 | `sqlfluff/sqlfluff` | SQL lint config, postgres dialect |
 | `ssh/config.example` | ssh config template (bastion + staging warehouse) |
 | `env/env.example` | Names of the env vars my scripts read, all empty |
-| `bin/` | Small scripts: `csvpeek`, `pgtunnel`, `embedcheck` |
+| `bin/` | Small scripts: `csvpeek`, `pgtunnel`, `embedcheck`, `so-vpn-login` |
 
 ## Notes
 
@@ -44,4 +44,4 @@ cd ~/dotfiles
     email = you@example.invalid
 ```
 
-Owner: Yuki Brannagh. Last reviewed: 2026-11-10
+Owner: Yuki Brannagh. Last reviewed: 2026-11-12

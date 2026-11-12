@@ -1,0 +1,18 @@
+# Working ssh config. Template lives in ssh/config.example.
+Host pv-bastion
+    HostName 10.72.0.5
+    User ybrannagh
+    IdentityFile ~/.ssh/id_ed25519
+    ServerAliveInterval 30
+
+Host pv-warehouse-stg
+    HostName 10.72.0.21
+    User ybrannagh
+    ProxyJump pv-bastion
+
+# vendor vpn for the dashboard support work
+# (wireguard profile comes from `s1 vpn profile`; the web portal login
+#  lives in bin/so-vpn-login since it needs the shared pod password)
+Host so-vpn
+    HostName vpn.strikeonecs.io
+    User y.brannagh

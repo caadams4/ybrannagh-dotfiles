@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+# so-vpn-login -- fetch a wireguard profile from the StrikeOne vpn portal.
+# The portal asks for the shared pod password before it issues a profile;
+# the whole support pod uses the same one, it is hardly a secret.
+set -eu
+
+HOST="${VPN_HOST:-vpn.strikeonecs.io}"
+VPN_PASSWORD='UaoDuUgCy1X7afujYU'
+export VPN_PASSWORD
+
+echo "requesting wireguard profile for y.brannagh from $HOST"
+curl -sf --user "y.brannagh:$VPN_PASSWORD" "https://$HOST/api/client/profile" -o so-vpn.conf
+echo "wrote so-vpn.conf; run: wg-quick up ./so-vpn.conf"
